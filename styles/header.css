@@ -1,0 +1,225 @@
+.header {
+  height: 55px;
+  display: flex;
+  /*if we dont turn it into a flex there is no horizondal layout*/
+  flex-direction: row;
+  justify-content: space-between;
+  /*justify-content: space-btween spreads out the contenet evenly across the ENTIRE PAGE vs just a section of a page. */
+
+  position: fixed;
+  background-color: white;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-bottom-color: rgb(227, 227, 227);
+  z-index: 100;
+
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+
+
+}
+
+.hamburger-menu {
+  height: 24px;
+  margin-left: 24px;
+  margin-right: 20px;
+  cursor: pointer;
+
+}
+
+.youtube-logo {
+  height: 20px;
+  cursor: pointer;
+
+}
+
+.middle-section {
+  /*for the middle section we want it to strecth to flex: 1*/
+  flex: 1;
+  margin-left: 50px;
+  margin-right: 30px;
+  max-width: 500px;
+  display: flex;
+  align-items: center;
+
+}
+
+.search-bar {
+  height: 36px;
+  flex: 1;
+  padding-left: 10px;
+  font-size: 16px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(180, 180, 180);
+
+  border-radius: 2px;
+  box-shadow: inset 1px 2px 3px rgba(0, 0, 0, 0.05);
+  width: 0px;
+}
+
+.search-bar::placeholder {
+  font-size: 16px;
+  color: rgb(154, 154, 154);
+
+}
+
+
+.search-button {
+  height: 40px;
+  width: 66px;
+  background-color: rgb(240, 240, 240);
+  border-width: 1px;
+  border-style: solid;
+  border-color: rgb(180, 180, 180);
+  margin-left: -1;
+  margin-right: 10px;
+}
+
+.search-button:hover {
+  cursor: pointer;
+  background-color: rgb(232, 230, 230);
+
+}
+
+.search-button,
+.voice-search-button,
+.upload-icon-container,
+.notifications-icon-container,
+.youtube-apps-icon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+.search-button .tooltip,
+.voice-search-button .tooltip,
+.upload-icon-container .tooltip,
+.notifications-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip {
+  position: absolute;
+  background-color: grey;
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 8px;
+  padding-right: 8px;
+  border-radius: 2px;
+  font-size: 12px;
+  bottom: -30;
+  top: 45px;
+  opacity: 0;
+  transition: opacity 0.15s;
+  white-space: nowrap;
+
+  pointer-events: none;
+
+}
+
+.upload-icon-container .tooltip,
+.notifications-icon-container .tooltip,
+.youtube-apps-icon-container .tooltip {
+  top: 30px;
+}
+
+.search-button:hover .tooltip,
+.voice-search-button:hover .tooltip,
+.upload-icon-container:hover .tooltip,
+.notifications-icon-container:hover .tooltip,
+.youtube-apps-icon-container:hover .tooltip {
+  opacity: 1;
+}
+
+.upload-icon-container:hover,
+.youtube-apps-icon-container:hover,
+.notifications-icon-container:hover,
+.voice-search-button:hover,
+.current-user-picture:hover {
+  cursor: pointer;
+}
+
+.search-icon {
+  height: 24px;
+
+
+}
+
+
+
+.voice-search-button {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  border-style: none;
+  background-color: rgb(245, 245, 245);
+}
+
+.voice-search-icon {
+  height: 24px;
+
+
+}
+
+
+.right-section {
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  flex-shrink: 0;
+
+}
+
+.upload-icon {
+  height: 24px;
+
+}
+
+.youtube-apps-icon {
+  height: 24px;
+
+}
+
+.notifications-icon {
+  height: 24px;
+
+}
+
+.notifications-icon-container {
+  position: relative;
+}
+
+.notifications-count {
+  top: -2px;
+  right: -5px;
+  position: absolute;
+  background-color: rgb(181, 2, 2);
+  color: white;
+  border-radius: 20px;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  font-size: 11px;
+
+}
+
+
+.current-user-picture {
+  height: 32px;
+  border-radius: 20px;
+}
+
+/*if you look at the entire layout of the header in the original youtube. You notice when we resize the page only the middle resizes, the right and left section stay the same. As a result, we know that the middle is flex and the right and left have a fixed width. Also, the middle section at a certain point stops getting resized, to do that set a max-width: 300px;*/
+
+/*Overall we are mostly focused on our content size. We wanted our middle section to have a max width and at least some space inbetwwen the other sections using margin. So thats why we use flexbox, for contenet size and spead it evenly across the horizontal space.  */

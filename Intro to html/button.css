@@ -1,0 +1,178 @@
+.subscribe-button {
+  background-color: rgb(198, 0, 0);
+  color: white;
+  border: none;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 16px;
+  padding-right: 16px;
+  /* padding-right: 16px; */
+  border-radius: 2px;
+  cursor: pointer;
+  margin-right: 8px;
+  transition: opacity 0.15s;
+
+
+
+  /*The reason we put transition here and not in hover is because in hover 
+  the transition applies only when we are hovering therefore when we let go its like we never applied the transition. */
+
+}
+
+/* //styles that apply only when we hover over the button 
+:hover is known as a pseudoclass which is adding styles in a certain situation. In this case its going to add extra styles when we hover. */
+.subscribe-button:hover {
+  opacity: 0.7;
+  /*value 0-1*/
+}
+
+/* 
+//this changes the button when it is clicked.  */
+.subscribe-button:active {
+  opacity: 0.4;
+}
+
+.join-button {
+  background-color: white;
+  border-color: rgb(41, 118, 211);
+  border-style: solid;
+  color: rgb(41, 118, 211);
+  border-width: 1px;
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-top: 9px;
+  padding-bottom: 9px;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: background-color 0.15s, color 0.15s;
+  vertical-align: top;
+  /*join may look taller due to the border
+  to compensate yoy must reduce the padding of the bottom and the top to one px
+  for example 10px -> 9px because the border width is 1 px*/
+}
+
+.join-button:hover {
+  color: white;
+  background-color: rgb(41, 118, 211);
+
+
+}
+
+.join-button:active {
+  opacity: 0.7;
+
+}
+
+.tweet-button {
+  color: white;
+  background-color: rgb(0, 140, 239);
+  border-radius: 15px;
+  border: none;
+  width: 80px;
+  height: 30px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: ponter;
+  margin-left: 8px;
+  transition: box-shadow 0.15s;
+  vertical-align: top;
+  /* to align the top instead of the text */
+
+
+
+  /* //when you are doing border radius make and you want fully rounded corners 
+  // set it to half the height or width (depending on which is smaller.) */
+}
+
+.tweet-button:hover {
+
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+  /* horizonalpx verticalpx blur px
+  rgba is the same as rgb and then a is the opacity */
+}
+
+
+.uber-button {
+  color: white;
+  background-color: black;
+  margin-left: 8px;
+  border: none;
+  width: 125px;
+  height: 36px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.uber-button:hover {
+  background-color: rgb(45, 45, 45);
+}
+
+.amazon-button {
+  background-color: rgb(253, 227, 31);
+  margin-left: 8px;
+  width: 140px;
+  height: 30px;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+
+}
+
+.amazon-button:hover {
+  background-color: rgb(254, 190, 0);
+}
+
+.discord-button {
+  color: white;
+  border: none;
+  background-color: rgb(65, 95, 185);
+  width: 140px;
+  height: 30px;
+  border-radius: 15px;
+  margin-left: 8px;
+  margin-top: 8px;
+  transition: box-shadow 0.15s;
+}
+
+.discord-button:hover {
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.15);
+}
+
+.bootstrap-button {
+  color: grey;
+  background-color: white;
+  border-color: grey;
+  border-radius: 2px;
+  border-style: solid;
+  width: 80px;
+  height: 30px;
+  font-size: 12px;
+  font-weight: bold;
+  border-width: thin;
+  margin-left: 8px;
+  transition: color .15s, background-color .15s;
+
+
+}
+
+.bootstrap-button:hover {
+  color: white;
+  background-color: grey;
+}
+
+.test-button {
+  border-style: none;
+  color: black;
+  padding: 10px;
+  background-color: white;
+  box-shadow: 0px 0px 2px rgba(0, 0, 0, 0.8);
+}
+
+
+
+/* selector{
+  property: css value;
+} */
+
+/* //google css *property you want like round borders* */

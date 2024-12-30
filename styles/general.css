@@ -1,0 +1,17 @@
+p {
+  /*This is a font stack. So arial is a backup */
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+/*if we inpsect our page our body has a default of 8px margins on every side. So lets set the margins to 0 */
+
+body {
+  font-family: Roboto, Arial;
+  margin: 0px;
+  height: 2000px;
+  padding-top: 80px;
+  padding-left: 96px;
+  padding-right: 24px;
+  background-color: rgb(248, 248, 248);
+}

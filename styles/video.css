@@ -1,0 +1,103 @@
+.video-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 16px;
+  row-gap: 40px;
+
+}
+
+@media (max-width: 750px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 751px) and (max-width: 999) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}
+
+@media (min-width: 1000px) {
+  .video-grid {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+
+.thumbnail {
+  width: 100%;
+  cursor: pointer;
+
+
+  /* 
+   display: block;
+   width: 300px; */
+  /*when we set the width of an image the height also changes and vice versa. if we set both the height and width  it 
+  may become stetched*/
+  /*font-size would not work because it doesnt make sense for an image*/
+
+  /*some properties only applicable img element include 
+  opject-fit:cover // if we set the width 300px and height to 300 px it would not be stretched rather parts of the image will be coverd.
+  object-position: left; // if we set width 300px and height 300px then it would not be stretched and but only the left side of the image is shown
+
+  object: contained// the whole image stays intact and is contained within the 300x300 wxh the border properties below show the actual size of the image.
+  border-width: 2px; 
+  border-style: solid;
+  border-color: red;
+  */
+}
+
+
+
+.video-title {
+  margin-top: 0px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+
+.video-info-grid {
+  display: grid;
+  grid-template-columns: 50px 1fr;
+
+}
+
+
+
+.profile-picture {
+  width: 36px;
+  border-radius: 30px;
+}
+
+.thumbnail-row {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+.video-author,
+.video-stats {
+  font-size: 12px;
+  color: rgb(96, 96, 96);
+}
+
+.video-author {
+  margin-bottom: 4px;
+  cursor: pointer;
+}
+
+.video-timestamp {
+  color: white;
+  background-color: black;
+  position: absolute;
+  bottom: 8px;
+  right: 5px;
+  font-size: 12px;
+  font-weight: 500px;
+  font-family: roboto, arial;
+  padding: 4px;
+  border-radius: 2px;
+
+}
